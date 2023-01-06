@@ -1,0 +1,36 @@
+﻿
+
+
+<h1>NewEmployee</h1>
+
+<form action="/Home/createEmployee" method="post" enctype="multipart/form-data">
+
+
+    Name
+    <br />
+    <input type="text" name="name" id="name" value="@ViewBag.Name" />
+    <br />
+    <br />
+
+    Phone
+    <br />
+    <input type="tel" name="phone" id="phone" value="@ViewBag.Phone" />
+    <br />
+    <br />
+
+    Email
+    <br />
+    <input type="email" name="email" id="email" value="@ViewBag.Email" />
+    <br />
+    <br />
+
+
+    <input type="file" class="upload" name="Image" id="Image" accept="image/*"> <br />
+
+    <input type="reset" value="Start Over" />
+    <input type="submit" value="Save Employee" />
+
+
+
+</form>
+

@@ -1,0 +1,53 @@
+﻿
+
+
+
+Edit Employee
+
+
+<form action="/Home/saveEmployee" method="post" enctype="multipart/form-data">
+
+    Name <br />
+    <input type="text" name="name" id="name" value="@ViewBag.Name"/> <br /> <br />
+
+    Phone <br />
+    <input type="tel" name="phone" id="phone" value="@ViewBag.Phone" /> <br /> <br />
+
+    Email <br />
+    <input type="email" name="email" id="email" value="@ViewBag.Email" /> <br /> <br />
+
+    <input type="hidden" name="ID" id="ID" value="@ViewBag.employee.Id" /> <br />
+    
+    <input type="file" class="upload" name="Image" id="Image" accept="image/*">
+
+
+    @*<div class="col-xl-2">
+        @if (ViewBag.employee.Id == 0)
+        {
+            <div class="fileupload btn btn-primary waves-effect waves-light mt-1 mr-1">
+                <span><i class="mdi mdi-cloud-upload mr-2"></i>Upload photo</span>
+                <input type="file" class="upload" name="Image" id="Image" accept="image/*">
+            </div>
+
+        }
+        else
+        {
+            <img src="@("~/uploadedphoto/" + @ViewBag.staff.PhotoName)" asp-append-version="true" class="avatar-title" />
+            <input type="hidden" value="@ViewBag.staff.PhotoName" name="PhotoName" id="PhotoName">
+            @:&emsp;&emsp;&emsp;&emsp;
+            <div class="fileupload btn btn-primary waves-effect waves-light mt-1 mr-1">
+                <span><i class="mdi mdi-cloud-upload mr-2"></i>Edit photo</span>
+                <input type="file" class="upload " name="PhotoFile" id="PhotoFile" accept="image/*">
+            </div>
+        }
+    </div> <!-- col-->*@
+
+
+
+    <input  type="reset" value="Start Over"/>
+    <input type="submit" value="Update Employee" />
+    
+
+
+
+</form>

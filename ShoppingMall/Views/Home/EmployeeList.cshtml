@@ -1,0 +1,57 @@
+﻿
+
+<form action="/Home/searchEmployee" method="post">
+    
+<table>
+
+    <tr>
+            <td class="col-md-11"><h1>EmloyeeList</h1></td>
+            <td class="col-md-2"><input type="search" name="search" id="search" placeholder="searchMovie" /></td>
+            <td class="nav-tabs-justified"> <input type="submit" value="Search" class="btn btn-primary" /></td>
+    </tr>
+
+</table>
+
+
+
+
+
+
+</form>
+
+
+
+
+
+<table class="table table-hover table-bordered table-striped">
+
+
+    <thead class="bg-success">
+        <tr class="text-warning">
+            <td>Name</td>
+            <td>Phone</td>
+            <td>Email</td>
+            <td>Change</td>
+            <td>Delete</td>
+        </tr>        
+    </thead>
+
+
+    @foreach(var employee in ViewBag.Employee)
+    {
+
+        <tr>
+            <td>@employee.Name</td>
+            <td>@employee.Phone</td>
+            <td>@employee.Email</td>
+            <td><a href="/Home/editEmployee/?Id=@employee.Id">Edit</a></td>
+            <td><a href="/Home/deleteEmployee/?Id=@employee.Id">Remove</a></td>
+        </tr>
+
+    }
+
+
+
+
+
+</table>

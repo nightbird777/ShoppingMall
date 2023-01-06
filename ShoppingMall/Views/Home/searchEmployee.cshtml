@@ -1,0 +1,30 @@
+﻿
+
+
+
+
+<table class="table table-hover table-bordered table-striped">
+
+
+    <thead class="bg-success">
+        <tr class="text-warning">
+            <td>Name</td>
+            <td>Phone</td>
+            <td>Email</td>
+        </tr>
+    </thead>
+
+
+    @foreach (var employee in ViewBag.Employee)
+    {
+
+        <tr>
+            <td>@employee.Name</td>
+            <td>@employee.Phone</td>
+            <td>@employee.Email</td>
+        </tr>
+
+    }
+
+
+</table>
